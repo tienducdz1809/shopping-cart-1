@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+    <androidx.cardview.widget.CardView
+        android:padding="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_border"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:cardCornerRadius="10dp"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_gravity="center" >
+
+            <ImageView
+                android:id="@+id/product_img"
+                android:layout_width="75dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_margin="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_baseline_image_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="8dp"
+                android:scaleType="fitCenter"
+                android:layout_weight="1"
+                android:contentDescription="@string/description"
+                />
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:id="@+id/product_name_and_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+          >
+
+                <TextView
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:id="@+id/product_name"
+
+                    android:text="@string/bottom_sheet_behavior"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_red"
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/product_price"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/increase_quantity"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_up_24" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:text="@string/num_quartity"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/description"
+                    android:id="@+id/reduce_quantity"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:id="@+id/sum_price"
+                android:layout_width="40dp"
+                android:textColor="@color/light_red"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="@string/sum_cost"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:background="@drawable/ic_border"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:scaleType="fitStart"
+            android:layout_height="200dp"
+            android:contentDescription="@string/description"
+            android:layout_width="match_parent"
+            android:id="@+id/product_img"
+ />
+
+        <TextView
+            android:maxLines="2"
+            android:text="@string/app_name"
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@color/light_red"
+                android:textSize="20sp"
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+/>
+
+            <ImageButton
+                android:layout_height="30dp"
+                android:contentDescription="@string/description"
+                android:id="@+id/add_to_card"
+                style="@android:style/Widget.ImageButton"
+                android:layout_width="30dp"
+
+                android:src="@drawable/ic_baseline_add_shopping_cart_24" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
